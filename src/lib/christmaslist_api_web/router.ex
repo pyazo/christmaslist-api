@@ -21,7 +21,7 @@ defmodule ChristmaslistApiWeb.Router do
   scope "/api", ChristmaslistApiWeb do
     pipe_through :api
 
-    get "/users", UserController, :index
-    get "/users/:id", UserController, :show
+    get "/users", UserController, :list
+    get "/users/:id", UserController, :getById
   end
 end
