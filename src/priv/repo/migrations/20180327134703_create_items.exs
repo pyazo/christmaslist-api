@@ -7,6 +7,8 @@ defmodule ChristmaslistApi.Repo.Migrations.CreateItems do
       add :checked, :boolean
 
       add :person_id, references(:people)
+
+      timestamps()
     end
   end
 end

@@ -8,6 +8,7 @@ defmodule ChristmaslistApiWeb.User do
     field :firstName, :string, size: 50
     field :lastName, :string, size: 50
     field :email, :string, size: 50
+    field :isPremium, :boolean
 
     has_many :people, Person
 

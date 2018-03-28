@@ -10,6 +10,8 @@ defmodule ChristmaslistApi.Repo.Migrations.CreatePeople do
       add :jacketSize, :string, size: 50
 
       add :user_id, references(:users)
+
+      timestamps()
     end
   end
 end
