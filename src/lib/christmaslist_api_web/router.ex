@@ -23,5 +23,8 @@ defmodule ChristmaslistApiWeb.Router do
 
     get "/users", UserController, :list
     get "/users/:id", UserController, :getById
+
+    get "/people", PersonController, :list
+    get "/people/:id", PersonController, :getById
   end
 end
