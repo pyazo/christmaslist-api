@@ -1,5 +1,6 @@
 defmodule ChristmaslistApiWeb.Person do
   use Ecto.Schema
+  import Ecto.Changeset
 
   alias ChristmaslistApiWeb.Item
 
@@ -13,5 +14,11 @@ defmodule ChristmaslistApiWeb.Person do
     has_many :items, Item
 
     timestamps()
+  end
+
+  def changeset(strict, params \\ %{}) do
+    struct
+    |> cast(params, [:name, :shirtSize, :shoeSize, :pantsSize, :jacketSize])
+    |> validate_required([:name, :shirtSize, :shoeSize, :pantsSize, :jacketSize])
   end
 end

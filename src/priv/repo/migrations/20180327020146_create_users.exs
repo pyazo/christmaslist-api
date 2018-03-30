@@ -7,7 +7,7 @@ defmodule ChristmaslistApi.Repo.Migrations.CreateUsers do
       add :firstName, :string, size: 50
       add :lastName, :string, size: 50
       add :email, :string, size: 50
-      add :isPremium, :boolean
+      add :isPremium, :boolean, default: false, null: false
 
       timestamps()
     end

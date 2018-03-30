@@ -21,10 +21,16 @@ defmodule ChristmaslistApiWeb.Router do
   scope "/api", ChristmaslistApiWeb do
     pipe_through :api
 
-    get "/users", UserController, :list
-    get "/users/:id", UserController, :getById
+    get "/users", UserController, :index
+    get "/users/:id", UserController, :show
+    post "/users", UserController, :create
+    put "/users/:id", UserController, :update
+    delete "/users/:id", UserController, :delete
 
-    get "/people", PersonController, :list
-    get "/people/:id", PersonController, :getById
+    get "/people", PersonController, :index
+    get "/people/:id", PersonController, :show
+    post "/people", PersonController, :create
+    put "/people/:id", PersonController, :update
+    delete "/people/:id", PersonController, :delete
   end
 end
